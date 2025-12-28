@@ -1,0 +1,15 @@
+.venv
+venv
+/.venv
+/venv
+__pycache__
+/__pycache__
+Log
+/Log
+screenshot_captcha
+/screenshot_captcha
+user_data
+/user_data
+start_site.bat
+.idea
+/.idea
