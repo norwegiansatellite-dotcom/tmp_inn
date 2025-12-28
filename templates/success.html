@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container_success">
+            <img src="{{ url_for('static', filename='logo.svg') }}" alt="Логотип Intel" class="center-logo">
+        </div>
+    </header>
+    <main>
+        <div class="container_success_two">
+            <section class="hero">
+                <div class="hero__content">
+                    <h2>Спасибо! Робот отправит вам уведомление о готовности на почту, ожидайте!</h2>
+                    <div class="actions">
+                        <a href="{{ url_for('index') }}" class="button button--primary">Вернуться назад</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: '/start_process',
+        type: 'GET',
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+</script>
